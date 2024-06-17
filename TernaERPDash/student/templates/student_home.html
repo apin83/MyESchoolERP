@@ -1,0 +1,176 @@
+﻿{% extends 'master.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+  i {
+    size: 10px 5px;
+
+  }
+   .index-main{
+    background-color: black;
+  }
+#index-main{
+    height: 10vh;
+}
+  
+  #index-main ul li {
+    padding: 5px;
+    margin: 10px;
+    border-width: 0px;
+    list-style: none;
+    list-style-position: inside;
+    /* border-color: #b872b2; */
+    /* background-color: rgb(238, 223, 197); */
+    border-radius: 30px;
+    /* background-color: wheat; */
+  }
+
+  .cnt-detail{
+    height: 100vh;
+    background-color: custom-4;
+    margin-top: 5px;
+  }
+  /* #index-main ul li:hover {
+    background-color: lightsalmon;
+  } */
+  /* #index-main ul li :hover {
+ 
+    background-color: black;
+  } */
+/* CSS */
+.button-24 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: rgb(223, 147, 147);
+  background-position: 0 0;
+  color: #FF4742;
+}
+  
+.button-24:active {
+  opacity: .5;
+}
+
+  .opt {
+  transform:
+    perspective(600px)
+    translate3d(0px, 0px, -250px)
+    rotateX(15deg)
+    scale(0.9, 0.9);
+  border-radius: 20px;
+  border: 3px solid #e6e6e6;
+  box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+  transition: 0.4s ease-in-out transform;
+
+  &:hover {
+    transform: translate3d(0px, 0px, -250px);
+  }
+}
+    /* transform:
+    perspective(900px)
+    rotateX(60deg)
+    scale(0.7);
+  box-shadow: 0px 20px 100px #555;
+  transition:0.5s ease all;
+
+  &:hover {
+    transform:
+      rotate(0deg)
+      scale(1)
+      translateY(10px);
+  } */
+
+</style>
+<div id="index-main" class="container-fluid h-100   fs-6 float-center align-items-center mb-2 mt-2 custom-2">
+  <!-- <marquee class="mt-0 custom-3 text-dark w-1000">This is My web ERP for Engineering colleges</marquee> -->
+  <div class="fw-bolder shadow-lg p-3 mb-5 bg-body rounded text-center">STUDENT DASHBOARD</div>
+ 
+
+<div class="d-flex justify-content-center">
+  <div class="d-flex">
+    <img src={% static "assets/img/student1.png" %} class="img-fluid img-thumbnail" alt="...">
+  </div>
+  <div>
+<ul class="list-group list-group-horizontal float-center justify-content-center">
+  <li class="list-group-item custom-2">
+     <button class="button-24 btn custom-4 text-light btn-block" type="button">
+        <i class="bi bi-person-add fa-6x"></i>
+        ADMIT</button>
+  </li>
+  <li class="list-group-item custom-2">
+    <button class="btn btn-primary btn-block" type="button">EDIT</button>
+    
+  </li>
+  <li class="list-group-item custom-2">
+    <button class="btn btn-danger btn-block" type="button">
+      <i class="bi bi-person-dash"></i>
+      REMOVE</button>
+  </li>
+</ul>
+<ul class="list-group list-group-horizontal float-center justify-content-center">
+  <li class="list-group-item custom-2">
+    <button class="btn btn-primary text-light btn-block" type="button">BULK UPLOAD</button>
+    
+  </li>
+  <li class="list-group-item custom-2">
+    <button class="btn bg-success text-light btn-block bi-search" type="button">SEARCH</button>
+  </li>
+  <li class="list-group-item custom-2">
+    <button class="btn btn-primary text-light btn-block" type="button">OPTION</button>
+  </li>
+</ul>
+</div>
+</div>
+
+
+<div class="cnt-detail container-fluid border border-5">
+<h6 class="fs-sm fw-bolder bg-dark text-light">STUDENT STATISTICS</h6>
+
+</div>
+  <!-- <div class="row">
+    
+    <div class="col">
+
+    </div>
+  </div> -->
+  
+   <!-- <div><img src={% static "assets/img/student1.png" %} class="img-fluid img-thumbnail" alt="..."></div>
+    <div class="d-grid gap-2 col-6 mx-auto justify-content-center">
+      <button class="btn btn-primary" type="button">
+        <i class="bi bi-person-add fa-6x"></i>
+        ADMIT</button>
+    
+      
+    </div> -->
+
+
+  
+</div>
+        <!-- End #main -->
+     <!-- ======= Footer ======= -->
+   
+{% endblock %}

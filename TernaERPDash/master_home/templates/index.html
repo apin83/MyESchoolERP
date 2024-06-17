@@ -1,0 +1,315 @@
+﻿{% extends 'master.html' %}
+{% load static %}
+{% block content %}
+
+<link href={% static "assets/css/style1.css" %} rel="stylesheet">
+<style>
+  .listoption{
+    min-width: 190px;
+    max-width: 230px;
+    align-items: center;
+  }
+  .index-main{
+    background-color: black;
+  }
+
+  p{
+    font-weight: 100;
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(175, 41, 41);
+    /* color: rgb(240, 239, 240); */
+  }
+  #index-main ul li {
+    padding: 5px;
+    margin: 10px;
+    border-width: 1px;
+    /* border-color: #b872b2;
+    background-color: rgb(238, 223, 197); */
+    /* border-color: #02293b; */
+    background-color: rgb(253, 253, 253);
+    border-radius: 30px;
+    /* background-color: wheat; */
+  }
+  /* #index-main ul li div { */
+    /* border-width: 5px; */
+    /* background-color: darkgrey; */
+     /* border-color: #674188; */
+   
+  /* } */
+  /* #index-main ul li:hover {
+    background-color: lightsalmon;
+  } */
+  /* #index-main ul li :hover {
+ 
+    background-color: black;
+  } */
+  .opt {
+  transform:
+    perspective(600px)
+    translate3d(0px, 0px, -250px)
+    rotateX(15deg)
+    scale(0.9, 0.9);
+  border-radius: 20px;
+  
+  border: 3px solid #beb9b9;
+  box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+  transition: 0.4s ease-in-out transform;
+
+  &:hover {
+    transform: translate3d(0px, 0px, -250px);
+    border: 3px solid #e6e6e6;
+  }
+}
+</style>
+<div id="index-main" class="container-fluid fs-6 float-center align-items-center mb-2 mt-2 h-auto w-auto">
+ <!-- <marquee class="mt-0 custom-3 text-dark w-1000">This is My web ERP for Engineering colleges</marquee> -->
+ <div class="fw-bolder fs-4 shadow-lg p-3 mb-5 bg-body rounded text-center">DASHBOARD</div>
+
+
+
+
+  <div class="container-fluid border border-3">
+  <ul id="ulicons" class="list-group list-group-horizontal float-center justify-content-center h-auto w-auto">
+    <li class="list-group-item custom-2 d-flex">
+      <a href="student_home">
+      <div class="opt container  ">
+    <div class="card mb-2 mt-2 rounded-3" style="width:18rem; height:18rem;">
+      <img src={% static "assets/img/student1.png" %} class="img-fluid img-thumbnail" alt="...">
+      <div class="card-body">
+        <figure class="text-center">
+          <!-- <blockquote class="blockquote text-info"> -->
+            <p class="fw-bolder mt-2 mb-2 text-sm-center">STUDENT</p>
+          <!-- </blockquote> -->
+          <!-- <figcaption class="blockquote-footer">
+            STUIDENT <cite title="Source Title">Source Title</cite>
+          </figcaption> -->
+        </figure>
+        <!-- <p class="card-text">STUIDENT</p> -->
+      </div>
+    </div>
+  </div>
+  </a></li>
+
+  <li class="list-group-item custom-2"><a href="faculty_home">
+    <div class="opt container ">
+      <div class="card mb-2 mt-2 rounded-9" style="width: 18rem; height: 18rem;">
+        <img src={% static "assets/img/faculty.bmp" %} class="img-fluid img-thumbnail" alt="...">
+        <div class="card-body">
+          <figure class="text-center">
+            <!-- <blockquote class="blockquote text-info"> -->
+              <p class="fw-bolder mt-2 mb-2 text-sm-center">FACULTY</p>
+            <!-- </blockquote> -->
+            <!-- <figcaption class="blockquote-footer">
+              STUIDENT <cite title="Source Title">Source Title</cite>
+            </figcaption> -->
+          </figure>
+          <!-- <p class="card-text">STUIDENT</p> -->
+        </div>
+      </div>
+    </div>
+    </a></li>
+
+    <li class="list-group-item custom-2"><a href="#">
+      <div class="opt container ">
+        <div class="card mb-2 mt-2 rounded-9" style="width: 18rem; height: 18rem;">
+          <img src={% static "assets/img/event.png" %} class="img-fluid img-thumbnail" alt="...">
+          <div class="card-body">
+            <figure class="text-center">
+              <!-- <blockquote class="blockquote text-info"> -->
+                <p class="fw-bolder mt-2 mb-2 text-sm-center">EVENT</p>
+              <!-- </blockquote> -->
+              <!-- <figcaption class="blockquote-footer">
+                STUIDENT <cite title="Source Title">Source Title</cite>
+              </figcaption> -->
+            </figure>
+            <!-- <p class="card-text">STUIDENT</p> -->
+          </div>
+        </div>
+      </div>
+      </a></li>
+
+      <li class="list-group-item custom-2"><a href="#">
+        <div class="opt container ">
+          <div class="card mb-2 mt-2 rounded-9" style="width: 18rem; height: 18rem;">
+            <img src={% static "assets/img/leave.png" %} class="img-fluid img-thumbnail" alt="...">
+            <div class="card-body">
+              <figure class="text-center">
+                <!-- <blockquote class="blockquote text-info"> -->
+                  <p class="fw-bolder mt-2 mb-2 text-sm-center">LEAVE-APP</p>
+                <!-- </blockquote> -->
+                <!-- <figcaption class="blockquote-footer">
+                  STUIDENT <cite title="Source Title">Source Title</cite>
+                </figcaption> -->
+              </figure>
+              <!-- <p class="card-text">STUIDENT</p> -->
+            </div>
+          </div>
+        </div>
+        </a></li>
+    </ul> 
+
+
+
+    <ul class="list-group list-group-horizontal justify-content-center">
+      <li class="list-group-item custom-2"><a href="courses_home">
+    <div class="opt container ">
+      <div class="card mb-2 mt-2 rounded-9" style="width: 18rem; height: 18rem;">
+        <img src={% static "assets/img/COURSES.png" %} class="img-fluid img-thumbnail" alt="...">
+        <div class="card-body">
+          <figure class="text-center">
+            <!-- <blockquote class="blockquote text-info"> -->
+              <p class="fw-bolder mt-2 mb-2 text-sm-center">COURSES</p>
+            <!-- </blockquote> -->
+            <!-- <figcaption class="blockquote-footer">
+              STUIDENT <cite title="Source Title">Source Title</cite>
+            </figcaption> -->
+          </figure>
+          <!-- <p class="card-text">STUIDENT</p> -->
+        </div>
+      </div>
+    </div>
+    </a></li>
+  
+    <li class="list-group-item custom-2"><a href="#">
+      <div class="opt container ">
+        <div class="card mb-2 mt-2 rounded-9" style="width: 18rem; height: 18rem;">
+          <img src={% static "assets/img/timetable.png" %} class="img-fluid img-thumbnail" alt="...">
+          <div class="card-body">
+            <figure class="text-center">
+              <!-- <blockquote class="blockquote text-info"> -->
+                <p class="fw-bolder mt-2 mb-2 text-sm-center">TIME-TABLE</p>
+              <!-- </blockquote> -->
+              <!-- <figcaption class="blockquote-footer">
+                STUIDENT <cite title="Source Title">Source Title</cite>
+              </figcaption> -->
+            </figure>
+            <!-- <p class="card-text">STUIDENT</p> -->
+          </div>
+        </div>
+      </div>
+      </a></li>
+  
+      <li class="list-group-item custom-2"><a href="#">
+        <div class="opt container ">
+          <div class="card mb-2 mt-2 rounded-9" style="width: 18rem; height: 18rem;">
+            <img src={% static "assets/img/placement2.jpg" %} class="img-fluid img-thumbnail" alt="...">
+            <div class="card-body">
+              <figure class="text-center">
+                <!-- <blockquote class="blockquote text-info"> -->
+                  <p class="fw-bolder mt-2 mb-2 text-sm-center">PLACEMENTS</p>
+                <!-- </blockquote> -->
+                <!-- <figcaption class="blockquote-footer">
+                  STUIDENT <cite title="Source Title">Source Title</cite>
+                </figcaption> -->
+              </figure>
+              <!-- <p class="card-text">STUIDENT</p> -->
+            </div>
+          </div>
+        </div>
+        </a></li>
+
+        <li class="list-group-item custom-2"><a href="#">
+          <div class="opt container ">
+            <div class="card mb-2 mt-2 rounded-9" style="width: 18rem; height: 18rem;">
+              <img src={% static "assets/img/event.png" %} class="img-fluid img-thumbnail" alt="...">
+              <div class="card-body">
+                <figure class="text-center">
+                  <!-- <blockquote class="blockquote text-info"> -->
+                    <p class="fw-bolder mt-2 mb-2 text-sm-center">BLANK</p>
+                  <!-- </blockquote> -->
+                  <!-- <figcaption class="blockquote-footer">
+                    STUIDENT <cite title="Source Title">Source Title</cite>
+                  </figcaption> -->
+                </figure>
+                <!-- <p class="card-text">STUIDENT</p> -->
+              </div>
+            </div>
+          </div>
+          </a></li>
+      </ul> 
+
+
+      <ul class="list-group list-group-horizontal justify-content-center">
+        <li class="list-group-item custom-2"><a href="#">
+      <div class="opt container ">
+        <div class="card mb-2 mt-2 rounded-9" style="width: 18rem; height: 18rem;">
+          <img src={% static "assets/img/report.png" %} class="img-fluid img-thumbnail" alt="...">
+          <div class="card-body">
+            <figure class="text-center">
+              <!-- <blockquote class="blockquote text-info"> -->
+                <p class="fw-bolder mt-2 mb-2 text-sm-center">REPORTS</p>
+              <!-- </blockquote> -->
+              <!-- <figcaption class="blockquote-footer">
+                STUIDENT <cite title="Source Title">Source Title</cite>
+              </figcaption> -->
+            </figure>
+            <!-- <p class="card-text">STUIDENT</p> -->
+          </div>
+        </div>
+      </div>
+      </a></li>
+    
+      <li class="list-group-item custom-2"><a href="#">
+        <div class="opt container ">
+          <div class="card mb-2 mt-2 rounded-9" style="width: 18rem; height: 18rem;">
+            <img src={% static "assets/img/stud.bmp" %} class="img-fluid img-thumbnail" alt="...">
+            <div class="card-body">
+              <figure class="text-center">
+                <!-- <blockquote class="blockquote text-info"> -->
+                  <p class="fw-bolder mt-2 mb-2 text-sm-center">ALUMNI</p>
+                <!-- </blockquote> -->
+                <!-- <figcaption class="blockquote-footer">
+                  STUIDENT <cite title="Source Title">Source Title</cite>
+                </figcaption> -->
+              </figure>
+              <!-- <p class="card-text">STUIDENT</p> -->
+            </div>
+          </div>
+        </div>
+        </a></li>
+    
+        <li class="list-group-item custom-2"><a href="#">
+          <div class="opt container ">
+            <div class="card mb-2 mt-2 rounded-9" style="width: 18rem; height: 18rem;">
+              <img src={% static "assets/img/event.png" %} class="img-fluid img-thumbnail" alt="...">
+              <div class="card-body">
+                <figure class="text-center">
+                  <!-- <blockquote class="blockquote text-info"> -->
+                    <p class="fw-bolder mt-2 mb-2 text-sm-center">FEEDBACK</p>
+                  <!-- </blockquote> -->
+                  <!-- <figcaption class="blockquote-footer">
+                    STUIDENT <cite title="Source Title">Source Title</cite>
+                  </figcaption> -->
+                </figure>
+                <!-- <p class="card-text">STUIDENT</p> -->
+              </div>
+            </div>
+          </div>
+          </a></li>
+
+          <li class="list-group-item custom-2"><a href="#">
+            <div class="opt container">
+              <div class="card mb-2 mt-2 rounded-9" style="width: 18rem; height: 18rem;">
+                <img src={% static "assets/img/FACILITIES.png" %} class="img-fluid img-thumbnail" alt="...">
+                <div class="card-body">
+                  <figure class="text-center">
+                    <!-- <blockquote class="blockquote text-info"> -->
+                      <p class="fw-bold mt-2 mb-2 text-sm-center">FACILITIES</p>
+                    <!-- </blockquote> -->
+                    <!-- <figcaption class="blockquote-footer">
+                      STUIDENT <cite title="Source Title">Source Title</cite>
+                    </figcaption> -->
+                  </figure>
+                  <!-- <p class="card-text">STUIDENT</p> -->
+                </div>
+              </div>
+            </div>
+            </a></li>
+        </ul> 
+      </div>
+      </div>
+       <!-- End #main -->
+    <!-- ======= Footer ======= -->
+   
+{% endblock %}

@@ -1,0 +1,76 @@
+﻿{% extends 'master.html' %}
+{% load static %}
+{% block content %}
+
+<link href={% static "assets/css/style1.css" %} rel="stylesheet">
+<style>
+  .index-main{
+    background-color: black;
+  }
+
+  
+  #index-main ul li {
+    padding: 5px;
+    margin: 10px;
+    border-width: 1px;
+    border-color: #b872b2;
+    background-color: rgb(238, 223, 197);
+    border-radius: 30px;
+    /* background-color: wheat; */
+  }
+  /* #index-main ul li div { */
+    /* border-width: 5px; */
+    /* background-color: darkgrey; */
+     /* border-color: #674188; */
+   
+  /* } */
+  /* #index-main ul li:hover {
+    background-color: lightsalmon;
+  } */
+  /* #index-main ul li :hover {
+ 
+    background-color: black;
+  } */
+  .opt {
+  transform:
+    perspective(600px)
+    translate3d(0px, 0px, -250px)
+    rotateX(15deg)
+    scale(0.9, 0.9);
+  border-radius: 20px;
+  border: 3px solid #e6e6e6;
+  box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+  transition: 0.4s ease-in-out transform;
+
+  &:hover {
+    transform: translate3d(0px, 0px, -250px);
+  }
+}
+</style>
+<link href={% static "assets/vendor/bootstrap/css/bootstrap.min.css" %}  rel="stylesheet">
+<link href={% static "assets/vendor/bootstrap-icons/bootstrap-icons.css" %} rel="stylesheet">
+<div id="index-main" class="d-flex container-fluid fs-6 align-middle justify-content-center mb-2 mt-2 custom-2 m-1">
+  <div class="container-fluid"> 
+    <!-- <form  method="post" action="course_addition" class="p-3 mt-2 align-items-center border border-dark border-3"> -->
+      {% csrf_token %}
+      <div class="row">
+      <!-- <div class="col-sm-6 bg-danger">ADD NEW COURSE COPY</div>  -->
+       <div class="card mb-2 mt-2 rounded-9 h-auto w-auto col-sm-6 bg-light d-flex"> 
+          <p>{{ courseid }}</p>
+          <p>{{ course_name }}</p>
+
+       </div> 
+     
+       
+    <div class="col-sm-6 bg-dark"><label name="lblerr" visible="false" class="text-light"> {{ error }} </label></div>
+    <div class="col-sm-6 bg-primary"> <input class="btn mt-2 bg-dark text-primary fw-bolder" name="btnsubmit" type="submit" value="SUBMIT" ></div>
+   </div>
+  </div>
+    <!-- </form> -->
+ 
+  
+</div>
+       <!-- End #main -->
+    <!-- ======= Footer ======= -->
+   
+{% endblock %}

@@ -1,0 +1,68 @@
+﻿{% extends 'master.html' %}
+{% load static %}
+{% block content %}
+
+   
+        
+<main id="main" class="main align-items-center">
+        <!-- <img src={% static "assets/img/DandI.gif" %} alt="Interceptor in Action" style="width: 500px;height:400px;"> -->
+        <!-- <div class="pagetitle">
+            <h1>RF and Image Based Drone Detection !!!</h1>  
+        </div>End Page Title -->
+        <!-- Interceptor Card -->
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-xxl-4 col-md-6">
+                    <div class="card info-card sales-card">
+                        <div class="card-body">
+                            
+                            <h1>This is an index page</h1> 
+
+                            <!-- <div class="d-flex align-items-center">
+                                <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-display-fill"></i>
+                                </div>
+                            </div> -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End Interceptor Card -->
+
+        <section>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Active Interceptors</h5>
+                    <div class=".col-sm|md|lg|xl|xxl" role="group" aria-label="Basic outlined example">
+                        <p>
+                            
+                        </p>
+                    
+                        <!-- {% for x in mymembers %}
+                          
+                          {% if x.interceptor_status == 'Active' %}
+                          <button type="button" class="btn btn-outline-primary">{{ x.interceptor_id }}<br>Lattitude : {{ x.interceptor_lattitude }}<br>Longitude : {{ x.interceptor_longitude }}</button>
+                          {% endif %}
+                        {% endfor %}                     
+                    </div>
+                    <h5 class="card-title">Inactive Interceptors</h5>
+                    <div class=".col-sm|md|lg|xl|xxl" role="group" aria-label="Basic outlined example">
+                    
+                        {% for x in mymembers %}
+                          
+                          {% if x.interceptor_status == 'In-Active' %}
+                          <button type="button" class="btn btn-outline-primary">{{ x.interceptor_id }}<br>Lattitude : {{ x.interceptor_lattitude }}<br>Longitude : {{ x.interceptor_longitude }}</button>
+                          {% endif %}
+                        {% endfor %}                      -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main> <!-- End #main -->
+    <!-- ======= Footer ======= -->
+   
+{% endblock %}

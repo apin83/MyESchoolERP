@@ -1,0 +1,91 @@
+{% load static %}
+<html>
+<head>
+  <script type="text/javascript"> 
+    function preventBack() { 
+        window.history.forward();  
+    } 
+      
+    setTimeout("preventBack()", 0); 
+      
+    window.onunload = function () { null }; 
+</script> 
+</head>
+<body class="justify-content-center">
+
+    <!-- <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"> -->
+
+    <!-- Vendor CSS Files -->
+
+    
+    <link href={% static "assets/vendor/bootstrap/css/bootstrap.min.css" %}  rel="stylesheet">
+    <link href={% static "assets/vendor/bootstrap-icons/bootstrap-icons.css" %} rel="stylesheet">
+    <!-- <link href={% static "assets/vendor/boxicons/css/boxicons.min.css" %} rel="stylesheet">
+    <link href={% static "assets/vendor/quill/quill.snow.css" %} rel="stylesheet">
+    <link href={% static "assets/vendor/quill/quill.bubble.css" %} rel="stylesheet">
+    <link href={% static "assets/vendor/remixicon/remixicon.css" %} rel="stylesheet">
+    <link href={% static "assets/vendor/simple-datatables/style.css" %} rel="stylesheet"> -->
+
+    <!-- Template Main CSS File -->
+    <!-- <link href={% static "assets/css/style.css" %} rel="stylesheet"> -->
+    <div class="container-fluid d-flex justify-content-center mt-3 mb-3  P-3">
+        <div class="row h-500 justify-content-center border shadow-lg p-3">
+        <div class="col-md-6 bg-info P-3 align-middle ">
+            <img class="img-fluid " src={% static "assets/img/COLLEGE.jpg" %} alt="">
+            <!-- <p class="text-white bg-dark">TRACK RESOURCES WITH - INFO-ganGA </p> -->
+            <figure class="text-center">
+              <blockquote class="blockquote text-danger">
+                <p>FULL NAME OF INSTITUTE WITH COMPLETE ADDRESS AND WEBSITE AND OTHER INFORMATION </p>
+              </blockquote>
+              <figcaption class="blockquote-footer">
+                Company/Institute Name <cite title="Source Title">Contact and Email for Support</cite>
+              </figcaption>
+            </figure>
+        </div>
+    <!-- </div> -->
+    
+<div class="col-md-6">
+<nav class="navbar navbar-expand-lg navbar-light">  
+<div class="container-fluid justify-content-center">
+<link href={% static "assets/css/login.css" %}  rel="stylesheet">
+<div class="wrapper">
+  <div class="logo align-items-center">
+      <img src={% static "assets/img/T.avif" %} alt="">
+      <!-- <i class="bi bi-align-top"> </i>  -->
+  </div>
+  
+  <div class="text-center mt-2 name">
+    INSTITUTE/COMPANY <BR> VERSION
+  </div>
+  <!-- <table> -->
+  <form  method="post" action="master_login_check" class="p-3 mt-1">
+    {% csrf_token %}
+    {{ form.as_table }}
+   
+      <!-- <div class="form-field d-flex align-items-center">
+          <span class="far fa-user"></span>
+          <input type="text" name="userName" id="userName" placeholder="Username">
+      </div>
+      <div class="form-field d-flex align-items-center">
+          <span class="fas fa-key"></span>
+          <input type="password" name="password" id="pwd" placeholder="Password">
+      </div> -->
+     
+        <label name="lblerr" visible="false" class="text-danger"> {{ error }} </label>
+      <button class="btn mt-2" type="submit" >Login</button>
+  </form>
+<!-- </table> -->
+  <div class="text-center fs-6">
+      <a href="#">Forget password?</a> or <a href="signup">Sign up</a>
+  </div>
+</div>
+
+    </div>
+</nav>
+</div>
+</div>
+</div>
+
+</body>
+</html>

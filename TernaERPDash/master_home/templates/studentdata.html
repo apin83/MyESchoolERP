@@ -1,0 +1,20 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block content %}
+<main id="main" class="main align-items-center">
+    
+    <form method="post" action="profile_upload" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <!-- <input type="text" name="uname">
+        <input type="'text" name="caption">
+        <input type="file" name="image"> -->
+        <button type="submit">Upload</button>
+      </form>
+    
+       
+
+</main> <!-- End #main -->
+    <!-- ======= Footer ======= -->
+   
+{% endblock %}

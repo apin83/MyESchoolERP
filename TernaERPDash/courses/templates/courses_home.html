@@ -1,0 +1,421 @@
+﻿{% extends 'master.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- <style>
+  /* table th{
+    background-color: darkslateblue;
+    border-color: #FF4742;
+    border-width: 2px;
+    text-align: justify;
+  } */
+  #modal_course{
+    display: none;
+  }
+  tr:hover td {
+  background: black;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+  .modal-label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12px;
+    font-weight: bold;
+    /* color: rgb(159, 162, 167);   */
+    color: #22262e;
+  }
+  div b{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12px;
+    font-weight: 990;
+    color: rgb(255, 255, 255);  
+    background-color: #373a3f;
+  }
+
+  
+  i {
+    size: 10px 5px;
+  }
+   .index-main{
+    background-color: black;
+  }
+#index-main{
+    height: 10vh;
+}
+  
+  #index-main ul li {
+    padding: 5px;
+    margin: 10px;
+    border-width: 0px;
+    list-style: none;
+    list-style-position: inside;
+    /* border-color: #b872b2; */
+    /* background-color: rgb(238, 223, 197); */
+    border-radius: 30px;
+    /* background-color: wheat; */
+  }
+
+  .cnt-detail{
+    height: 100vh;
+    background-color: custom-4;
+    margin-top: 5px;
+  }
+  /* #index-main ul li:hover {
+    background-color: lightsalmon;
+  } */
+  /* #index-main ul li :hover {
+ 
+    background-color: black;
+  } */
+/* CSS */
+.button-24 {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  width: 160px;
+  /* border-radius: 16px; */
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: large;
+  font-weight: 1000;
+  line-height: 13px;
+  min-height: 30px;
+  outline: 0;
+  padding: 5px 5px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: rgb(223, 147, 147);
+  background-position: 0 0;
+  color: #FF4742;
+  
+ 
+}
+
+  
+.button-24:active {
+  opacity: .5;
+}
+
+  .opt {
+  transform:
+    perspective(600px)
+    translate3d(0px, 0px, -250px)
+    rotateX(15deg)
+    scale(0.9, 0.9);
+  border-radius: 20px;
+  border: 3px solid #e6e6e6;
+  box-shadow: 0 70px 40px -20px rgba(0, 0, 0, 0.2);
+  transition: 0.4s ease-in-out transform;
+
+  &:hover {
+    transform: translate3d(0px, 0px, -250px);
+  }
+}
+    /* transform:
+    perspective(900px)
+    rotateX(60deg)
+    scale(0.7);
+  box-shadow: 0px 20px 100px #555;
+  transition:0.5s ease all;
+
+  &:hover {
+    transform:
+      rotate(0deg)
+      scale(1)
+      translateY(10px);
+  } */
+  .pushable {
+    background:  hsl(213, 15%, 86%);
+    border-radius: 5px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+    min-width: 150px;
+    transition: transform 4s;
+  }
+  .front {
+    display: block;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    font-size: 1.5rem;
+    background: hsl(30, 8%, 91%);
+    color: rgb(69, 78, 116);
+    transform: translateY(-8px);
+  }
+
+  .pushable:active .front {
+    transform: translateY(-2px);
+    background: hsl(216, 20%, 95%);
+    color: rgb(21, 50, 180);
+    
+  }
+  .search{
+    background-color: hsl(0, 78%, 82%);
+    color :hsl(216, 71%, 52%)
+  }
+#content-div{
+  border: 1px inset;
+  padding: 10px;
+  box-shadow: 5px 10px 8px 10px #adacac;
+
+}
+
+</style> -->
+<script>
+  $(document).ready(function(){
+   
+
+    $("#btnsubmit").click(function(){
+        alert("button");
+        $('#content').load("viewcourse.html");
+    }); 
+  
+
+});
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href={% static "assets/css/course_style.css" %} rel="stylesheet">
+
+
+
+<div id="index-main" class="container-fluid h-auto fs-sm float-center mx-0 my-0 align-items-center mb-2 mt-2 custom-2">
+  <!-- <marquee class="mt-0 custom-3 text-dark w-1000">This is My web ERP for Engineering colleges</marquee> -->
+  <div class="fw-bolder shadow-lg p-1 mb-3 custom-2 text-center "><h5 class="fs-4 fw-bolder">COURSES DASHBOARD</h5></div>
+
+<div id="content-div" class="cnt-detail container-fluid border border-3 p-1 h-auto w-auto justify-content-center overflow-auto div-responsive{-sm|-md|-lg|-xl} bg-gradient vh-100">
+  <!-- <div class="d-flex container-fluid justify-content-center mt-2" >
+    <img src={% static "assets/img/courses.png" %} class="img-fluid img-thumbnail" alt="...">
+  </div> -->  
+  <div class="container-fluid m-0 text-center justify-content-center">
+    <div class="row p-2 m-2 justify-content-center">
+          <div class="col-md-2 m-2 p-2">
+              <button class="pushable text-light btn-fs-4 btn-block" type="button" onclick="openModalCourse()" >
+                <span class="front">  ADD COURSE </span>
+              </button>
+          </div>
+          <div class="col-md-2 m-2 p-2">
+            <button class="pushable text-light btn-fs-4 btn-block" type="button" >
+              <span class="front">  EDIT COURSE </span>
+            </button>
+              <!-- <a href="/courses_edit"><button class="pushable btn-block" type="button"><span class="front">EDIT</span></button></a> -->
+          </div>
+          <div class="col-md-2 m-2 p-2">
+              <button class="pushable btn-block" type="button">
+                <span class="front">
+                    <i class="bi bi-person-dash"></i>REMOVE
+                </span>
+              </button>
+          </div>
+          <div class="col-md-2 m-2 p-2">
+            <button class="pushable text-light btn-block" type="button"><span class="front">  EXCEL </span></button>
+          </div>
+          <div class="col-md-2 m-2 p-2">
+            <button class="pushable text-light btn-block" type="button"><span class="front">OPTION</span></button>
+          </div>
+
+    </div>
+    
+    </div>
+
+<!-- course add div  -->
+    <div id="modal_course" class="m-2">
+      <!-- <a href="/courses_add"> ADD </a> -->
+      <!-- Form Add_course -->
+      <form  method="post" action="courses_addition" class="p-2 border border-success border-3 overflow-auto">
+        {% csrf_token %}
+      
+          <h5 id="modal_title" class="bg-dark container-fluid text-center text-light bg-gradient">ADD NEW COURSE</h5>
+        
+        <div class="container justify-content-center">
+          <div class="row">
+            {% for fm in course_form %}
+             <div class="col-md-4">
+                 <label class="fs-6 text-uppercase text-monospace">{{fm.label}}</label>
+                 {{ fm }}
+             </div>
+             {% endfor %}
+             <div class="col-md-2 p-3">
+                <button  class="pushable text-light btn-fs-4 btn-block" type="submit">
+                  <span id="modal_button_span" class="front fs-5"> SAVE COURSE </span>
+                  <!-- <i class="bi bi-person-add fa-6x"></i> -->
+                </button>
+              </div>  
+             <div class="col-md-2 p-3 ">
+                <button class="pushable text-light btn-fs-4 btn-block" type="button" onclick="closeModalCourse()">
+                  <span class="front fs-5"> CANCEL </span>
+                  <!-- <i class="bi bi-person-add fa-6x"></i> -->
+                </button>
+             </div>  
+            </div>
+        </div>
+      </form>
+      <!-- Form End -->
+</div>
+
+
+<h5 class="bg-dark container-fluid text-center text-light bg-gradient">List of Courses</h5>
+
+<table id="tbl-data" class="table">
+  <thead class="fw-bolder">
+        <th class="fs-5 fw-bolder align-middle  text-dark w-auto text-monospace text-uppercase" ><small></small></th>
+        <th class="fs-5 fw-bolder align-middle  text-dark w-auto text-monospace text-uppercase" ></th>
+        <th class="fs-5 fw-bolder align-middle  text-dark w-auto text-monospace text-uppercase" > Course Code </th>
+        <th class="fs-5 fw-bolder align-middle  text-dark w-auto text-monospace text-uppercase" > Course Name </th>
+        <th class="fs-5 fw-bolder align-middle  text-dark w-auto text-monospace text-uppercase" > Intake </th>
+        <th class="fs-5 fw-bolder align-middle  text-dark w-auto text-monospace text-uppercase" > Course Level </th>
+        <th class="fs-5 fw-bolder align-middle  text-dark w-auto text-monospace text-uppercase" > Course Core </th>
+        <th class="fs-5 fw-bolder align-middle  text-dark w-auto text-monospace text-uppercase" > Course Length in Years </th>
+        <!-- <th class="fs-sm fw-bolder align-middle bg-gradient text-dark w-auto text-monospace text-uppercase" > Course Pattern </th>
+        <th class="fs-sm fw-bolder align-middle bg-gradient text-dark w-auto text-monospace text-uppercase" > Course Medium </th>
+        <th class="fs-sm fw-bolder align-middle bg-gradient text-dark w-auto text-monospace text-uppercase" > Course Affiliation </th>
+        <th class="fs-sm fw-bolder align-middle bg-gradient text-dark w-auto text-monospace text-uppercase" > Course Affiliation Fees </th>
+        <th class="fs-sm fw-bolder align-middle bg-gradient text-dark w-auto text-monospace text-uppercase" > Valid From </th>
+        <th class="fs-sm fw-bolder align-middle bg-gradient text-dark w-auto text-monospace text-uppercase" > Valid UpTo </th>
+        <th class="fs-sm fw-bolder align-middle bg-gradient text-dark w-auto text-monospace text-uppercase" > Course Syllabus </th> -->
+  </thead>
+  
+  <tbody>
+    <!-- <div role="button" aria-describedby="more-info">Self-destruct</div> -->
+    {% for c in coursesdata %}
+<tr>
+  <td class="fs-xs align-middle">
+   <a href="#"><i class="bi bi-trash" data-toggle="tooltip" data-placement="right" title="Delete {{ c.courseid }}" style="font-size:17px;color:rgb(252, 76, 76)"></i></a>
+  </td>
+  <td class="fs-xs align-middle">
+   <!-- <a href="courses_edit?cid='{{ c.courseid }}'"> <i class="fa fa-edit" data-toggle="tooltip" data-placement="right" title="Edit {{ c.courseid }}" style="font-size:17px;color:rgb(7, 31, 97)"></i> </a> -->
+   <a href="courses_edit?cid={{ c.courseid }}"> <i class="fa fa-edit" data-toggle="tooltip" data-placement="right" title="Edit {{ c.courseid }}" style="font-size:17px;color:rgb(213, 217, 226)"></i> </a>
+   
+  </td>
+  <td class="fs-5 align-middle w-auto justify-content-center">
+    <input type="checkbox" value="{{ c.courseid }}">
+    <button  id="btnCourseId" type="button" class="btn btn-default btn-xs fs-6" data-toggle="modal" data-target="#{{ c.courseid }}" value="{{ c.courseid }}">{{ c.courseid }}</button>
+  </td>
+  <td class="fs-5 align-middle">  {{ c.course_name }} </td>
+  <td class="fs-5 align-middle">  {{ c.course_intake }} </td>
+  <td class="fs-5 align-middle">  {{ c.course_level }} </td>
+  <td class="fs-5 align-middle">  {{ c.course_core }} </td>
+  <td class="fs-5 align-middle">  {{ c.course_length_years }} </td>
+  <!-- <td class="fs-5 align-middle">  {{ c.course_pattern }} </td>
+  <td class="fs-5 align-middle">  {{ c.course_medium }} </td>
+  <td class="fs-5 align-middle">  {{ c.course_affiliation }} </td>
+  <td class="fs-5 align-middle">  {{ c.course_affiliation_fees }} </td>
+  <td class="fs-5 align-middle">  {{ c.course_affiliation_validfrom }} </td>
+  <td class="fs-5 align-middle">  {{ c.course_affiliation_validupto }} </td>
+  <td class="fs-5 align-middle"> <a href="#">  Download </a> </td> -->
+  </tr>
+  <tr>
+    <!-- Modal -->
+<div id="{{ c.courseid }}" class="modal fade" role="dialog">
+  <div class="modal-dialog ">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+        <h4 class="modal-title">{{ c.courseid }}</h4>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <!-- <div class="row text-danger text-uppercase"> <h4><b>Course-ID :</b> {{ c.courseid }}</h4></div> -->
+          <div class="row row-div">
+            <div class="col fs-5 text-uppercase"><b>Course Name </b> <p class="modal-label">{{ c.course_name }}</p></div>
+            <div class="col fs-5 text-uppercase"><b>Intake</b> <p class="modal-label">{{ c.course_intake }}</p></div>
+          </div>
+          <p></p>
+          <div class="row row-div">
+            <div class="col fs-5 mx-2 text-uppercase"><b>Level</b> <p class="modal-label">{{ c.course_level }}</p></div>
+            <div class="col fs-5 mx-2 text-uppercase"><b>Core</b> <p class="modal-label">{{ c.course_core }}</p></div>
+          </div>
+          <p></p>
+          <div class="row row-div">
+            <div class="col fs-5 mx-2 text-uppercase"><b>Course Length (in Years)</b> <p class="modal-label">{{ c.course_length_years }}</p></div>
+            <div class="col fs-5 mx-2 text-uppercase"><b>Pattern</b> <p class="modal-label">{{ c.course_pattern }}</p></div>
+          </div>
+          <p></p>
+          <div class="row row-div">
+            <div class="col fs-5 mx-2 text-uppercase"><b>Medium</b> <p class="modal-label">{{ c.course_medium }}</p></div>
+            <div class="col fs-5 mx-2 text-uppercase"><b>Affiliation</b> <p class="modal-label">{{ c.course_affiliation }}</p></div>
+          </div>
+          <p></p>
+          <div class="row row-div">
+            <div class="col fs-5 mx-2 text-uppercase"><b>Affiliation Fees</b> <p class="modal-label">{{ c.course_affiliation_fees }}</p></div>
+            <div class="col fs-5 mx-2 text-uppercase"><b>Affiliation Valid From</b> <p class="modal-label">{{ c.course_affiliation_validfrom }}</p></div>
+            </div>
+            <p></p>
+            <div class="row row-div">
+            <div class="col fs-5 mx-2 text-uppercase"><b>Affiliation Valid To</b> <p class="modal-label">{{ c.course_affiliation_validupto }}</p></div>
+            <div class="col fs-5 mx-2 text-uppercase"><b>Download</b></div>
+          </div>
+
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+  </tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>  
+</div>
+
+<!-- <button  type="button" class="btn btn-info btn-lg" data-toggle=".modal" data-target="#myModal">VIEW</button> -->
+<!-- JavaScript to fetch data and show popup -->
+<script>
+  function openModalCourse()
+  {
+    modal_div=document.getElementById('modal_course');
+    modal_div.style.display = 'block';
+    document.getElementById('modal_title').innerHTML="ADD NEW COURSE";
+    document.getElementById('modal_button_span').innerHTML="SAVE COURSE";
+  }
+
+    function closeModalCourse()
+  {
+    document.getElementById('modal_course').style.display = 'none';
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

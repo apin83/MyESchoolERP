@@ -1,0 +1,73 @@
+{% load static %}
+    <!-- <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"> -->
+
+    <!-- Vendor CSS Files -->
+    
+    <link href={% static "assets/vendor/bootstrap/css/bootstrap.min.css" %}  rel="stylesheet">
+    <link href={% static "assets/vendor/bootstrap-icons/bootstrap-icons.css" %} rel="stylesheet">
+    <!-- <link href={% static "assets/vendor/boxicons/css/boxicons.min.css" %} rel="stylesheet">
+    <link href={% static "assets/vendor/quill/quill.snow.css" %} rel="stylesheet">
+    <link href={% static "assets/vendor/quill/quill.bubble.css" %} rel="stylesheet">
+    <link href={% static "assets/vendor/remixicon/remixicon.css" %} rel="stylesheet">
+    <link href={% static "assets/vendor/simple-datatables/style.css" %} rel="stylesheet"> -->
+
+    <!-- Template Main CSS File -->
+    <!-- <link href={% static "assets/css/style.css" %} rel="stylesheet"> -->
+    <div class="d-flex justify-content-center mb-0 rounded-3">
+        <div class="align-items-center border border-light border-rounded border-5  rounded-3">
+            <img class="img-fluid" src={% static "assets/img/terna-logo123.jpg" %} alt="">
+        </div>
+    </div>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    
+<div class="container-fluid justify-content-center">
+<link href={% static "assets/css/login.css" %}  rel="stylesheet">
+<div class="wrapper">
+  <div class="logo align-items-center">
+      <img src={% static "assets/img/T.avif" %} alt="">
+      <!-- <i class="bi bi-align-top"> </i>  -->
+  </div>
+  
+  <div class="text-center mt-2 name">
+    (TERNA-ERP-2k24.0) <br> SIGN UP
+  </div>
+  <table>
+  <form  method="post" action="master_signup" class="p-3 mt-1">
+    {% csrf_token %}
+    {{ form.as_table }}
+   
+      <!-- <div class="form-field d-flex align-items-center">
+          <span class="far fa-user"></span>
+          <input type="text" name="userName" id="userName" placeholder="UserName">
+      </div>
+      <div class="form-field d-flex align-items-center">
+          <span class="fas fa-key"></span>
+          <input type="password" name="password" id="pwd" placeholder="Password">
+      </div>
+      <div class="form-field d-flex align-items-center">
+        <span class="far fa-user"></span>
+        <input type="text" name="usertype" id="usertype" placeholder="UserType">
+      </div>
+      <div class="form-field d-flex align-items-center">
+        <span class="far fa-user"></span>
+        <input type="email" name="useremail" id="useremail" placeholder="UserEmail">
+    </div>
+    <div class="form-field d-flex align-items-center">
+      <span class="far fa-user"></span>
+      <input type="text" name="usercontact" id="usercontact" placeholder="UserContact">
+    </div>
+    <div class="form-field d-flex align-items-center">
+      <span class="far fa-user"></span>
+      <input type="text" name="userisactive" id="userisactive" placeholder="0-Inactive 1-Active">
+    </div> -->
+    <button class="btn mt-2" type="submit">Sign Up</button>
+  </form>
+</table>
+
+</div>
+
+</div>
+</nav>
+
